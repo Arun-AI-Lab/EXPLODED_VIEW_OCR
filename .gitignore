@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.manifest
+*.spec
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# Streamlit
+.streamlit/
+
+# Environment files
+.env
+*.toml
+
+# Temporary files
+tmp/
+*.log
+*.db
+*.sqlite3
+
+# Jupyter / notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Project
+tmp/
+*.zip
+*.pdf
+*.tiff
+*.png
+
+# Secrets
+config/credentials.json
