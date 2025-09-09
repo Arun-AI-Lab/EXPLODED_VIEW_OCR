@@ -20,7 +20,8 @@ STOPWORDS = {
     "MANUFACTURER", "SHOCK", "THAT", "TO", "MRC", "MODULE", "REPAIR", "CENTER",
     "OPTICAL", "SHEET", "ITEM", "INCH", "LOCATION", "LOCATION#", "STATUS", "UNDER",
     "59INCH", "PANEL", "ASS'Y", "POL", "REAR", "FRONT", "COF", "SOURCE", "PCB",
-    "LEFT", "RIGHT", "ASS", "FOR", "SIDE", "STAND", "SCREW", "BOARD"
+    "LEFT", "RIGHT", "ASS", "FOR", "SIDE", "STAND", "SCREW", "BOARD", "DIAGRAM","SCHEMATIC",
+    "000","0000","00000","000000","0000000","FILR","FILE"
 }
 
 def normalize_token(token: str) -> str:
@@ -47,7 +48,7 @@ def is_common_english_word(token: str) -> bool:
 
     # Measure frequency on a Zipf scale: 0 (rare) to 7 (very common)
     freq = zipf_frequency(token.lower(), "en")
-    return freq >= 4.0  # threshold: common English word (e.g. THE, AND, FROM)
+    return freq >= 4.5  # threshold: common English word (e.g. THE, AND, FROM)
 
 
 def extract_parts(full_text: str) -> List[str]:
