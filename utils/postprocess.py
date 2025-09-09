@@ -48,7 +48,7 @@ def is_common_english_word(token: str) -> bool:
 
     # Measure frequency on a Zipf scale: 0 (rare) to 7 (very common)
     freq = zipf_frequency(token.lower(), "en")
-    return freq >= 4.5  # threshold: common English word (e.g. THE, AND, FROM)
+    return freq >= 5  # threshold: common English word (e.g. THE, AND, FROM)
 
 
 def extract_parts(full_text: str) -> List[str]:
